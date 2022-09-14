@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.show {
+  position: absolute;
+  right: 0;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(rgba(7,7,7,0.712),rgba(36, 33, 33, 0.685)) ,url("new.jpg");
+  background-repeat:contain;
+  background-size: cover;
+  background-position: center;
+
+  
+  color: white;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.show.active {
+  right: 300px;
+}
+.show header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url("menu.png");
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: url("c.png");
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+}
+.text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2rem;
+
+  text-transform: uppercase;
+}
+.text p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 20px 0;
+  letter-spacing: 2px;
+  max-width: 700px;
+}
+.text a {
+  display: inline-block;
+  font-size: 1rem;
+  background-color: white;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: black;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.text a:hover {
+  letter-spacing: 5px;
+  background-color: black;
+  color: white;
+}
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(6, 6, 29, 0.89) ;
+}
+
+.menu ul {
+  position: relative;
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color:white;
+  line-height: 3em;
+  
+}
+
+.menu ul a:hover {
+  color: #2098ca;
+}
+
+@media (max-width: 768px) {
+  
+  .show,
+  .show header {
+    padding: 40px;
+    
+  }
+
+  .text h2 {
+    font-size: 1rem;
+  }
+}
+
+
